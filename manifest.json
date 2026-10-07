@@ -1,0 +1,9 @@
+{
+	"id": "canteen-menu",
+	"name": "Canteen Menu",
+	"version": "0.1.0",
+	"minAppVersion": "1.7.2",
+	"description": "Show the current canteen menu of your student services in the sidebar.",
+	"author": "modularidea",
+	"isDesktopOnly": false
+}

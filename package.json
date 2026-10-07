@@ -1,0 +1,24 @@
+{
+	"name": "canteen-menu",
+	"version": "0.1.0",
+	"description": "Show the current canteen menu of your student services in the sidebar.",
+	"main": "main.js",
+	"type": "module",
+	"scripts": {
+		"dev": "node esbuild.config.mjs",
+		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+		"test": "vitest run"
+	},
+	"keywords": [],
+	"license": "0BSD",
+	"dependencies": {
+		"fast-xml-parser": "^5.2.5"
+	},
+	"devDependencies": {
+		"@types/node": "^22.15.17",
+		"esbuild": "0.25.5",
+		"obsidian": "latest",
+		"typescript": "^5.8.3",
+		"vitest": "^3.0.0"
+	}
+}
