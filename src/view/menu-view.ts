@@ -7,6 +7,7 @@ import { renderDayBar } from '../ui/day-bar';
 import { renderMealCard } from '../ui/meal-card';
 import { errorMessage, renderState } from '../ui/state-message';
 import { pickDefaultDay, todayKey } from './day-select';
+import { sameResult } from './same-result';
 
 export const CANTEEN_VIEW_TYPE = 'canteen-menu-view';
 
@@ -71,7 +72,8 @@ export class CanteenMenuView extends ItemView {
 
 	/** Re-render with current settings (price tier, favorites) without refetching. */
 	refresh(): void {
-		this.render();
+		// A settings save can arrive between construction and onOpen(), before the containers exist.
+		if (this.bodyEl) this.render();
 	}
 
 	private get canteen(): CanteenRef | undefined {
@@ -98,8 +100,12 @@ export class CanteenMenuView extends ItemView {
 			return;
 		}
 		const token = ++this.loadToken;
+		const previous = this.result;
+		const previousDate = this.selectedDate;
 		this.loading = true;
-		this.render();
+		// Only a first load or an explicit refresh shows progress; a silent cache check must not rebuild the DOM.
+		if (force || !previous) this.render();
+		let failed = false;
 		try {
 			const [result] = await Promise.all([
 				this.host.service.load(canteen, { force }),
@@ -110,11 +116,13 @@ export class CanteenMenuView extends ItemView {
 			this.error = result.error;
 		} catch (e) {
 			if (token !== this.loadToken) return;
+			failed = true;
 			this.result = undefined;
 			this.error = e instanceof ProviderError ? e : new ProviderError('network', (e as Error).message);
 		}
 		this.loading = false;
 		this.ensureDay();
+		if (!force && !failed && sameResult(previous, this.result) && previousDate === this.selectedDate) return;
 		this.render();
 	}
 
