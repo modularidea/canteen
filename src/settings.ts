@@ -54,3 +54,20 @@ export function normalizeSettings(raw: unknown): CanteenSettings {
 
 	return { favorites, selectedId, priceRole, cache };
 }
+
+/** Removes a favorite together with its cached plan and keeps `selectedId` pointing at something that exists. */
+export function removeFavorite(settings: CanteenSettings, id: string): void {
+	if (!settings.favorites.some((f) => f.id === id)) return;
+	settings.favorites = settings.favorites.filter((f) => f.id !== id);
+	delete settings.cache[id];
+	if (settings.selectedId === id) settings.selectedId = settings.favorites[0]?.id;
+}
+
+export function moveFavorite(settings: CanteenSettings, id: string, delta: 1 | -1): void {
+	const index = settings.favorites.findIndex((f) => f.id === id);
+	const target = index + delta;
+	if (index < 0 || target < 0 || target >= settings.favorites.length) return;
+	const list = [...settings.favorites];
+	[list[index], list[target]] = [list[target] as CanteenRef, list[index] as CanteenRef];
+	settings.favorites = list;
+}
