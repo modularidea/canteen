@@ -48,6 +48,17 @@ describe('cleanTitle', () => {
 		});
 	});
 
+	it('strips a bare trailing code list that has no parentheses', () => {
+		expect(cleanTitle('Chili sin Carne Eintopf dazu Brötchen 25a,25c,30')).toEqual({
+			name: 'Chili sin Carne Eintopf dazu Brötchen',
+			codes: ['25a', '25c', '30'],
+		});
+	});
+
+	it('keeps a lone trailing number, which is more likely part of the dish name', () => {
+		expect(cleanTitle('Menü 2').name).toBe('Menü 2');
+	});
+
 	it('decodes a leftover &amp; and collapses double spaces', () => {
 		const { name } = cleanTitle('[koeri]werk® Kalbs  oder vegane Currywurst (3) mit Sauce (33,34) &amp; Pommes');
 		expect(name).toBe('[koeri]werk® Kalbs oder vegane Currywurst mit Sauce & Pommes');

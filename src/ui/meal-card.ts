@@ -1,3 +1,4 @@
+import { setIcon } from 'obsidian';
 import { formatPrice } from '../format';
 import { Meal, MealNote, PriceRole } from '../types';
 
@@ -25,7 +26,13 @@ export function renderMealCard(parent: HTMLElement, meal: Meal, role: PriceRole)
 
 	if (meal.notes.length > 0) {
 		const details = card.createEl('details', { cls: 'canteen-meal-notes' });
-		details.createEl('summary', { text: 'Allergens and additives' });
+		// Icon + count instead of a repeated label; the full text stays reachable via aria-label/tooltip.
+		const summary = details.createEl('summary', {
+			cls: 'canteen-meal-notes-toggle',
+			attr: { 'aria-label': 'Allergens and additives', title: 'Allergens and additives' },
+		});
+		setIcon(summary.createSpan({ cls: 'canteen-meal-notes-icon' }), 'info');
+		summary.createSpan({ text: String(meal.notes.length) });
 		noteLine(details, 'Allergens', meal.notes.filter((n) => n.kind === 'allergen'));
 		noteLine(details, 'Additives', meal.notes.filter((n) => n.kind === 'additive'));
 		noteLine(details, 'Other codes', meal.notes.filter((n) => n.kind === 'unknown'));

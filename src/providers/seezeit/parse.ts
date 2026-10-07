@@ -19,6 +19,10 @@ const ICON_VEGETARIAN = '51';
 
 const CODE_GROUP = /\(\s*(\d+[a-z]?(?:\s*,\s*\d+[a-z]?)*)\s*\)/g;
 
+// Some titles end in an unparenthesised list ("... Brötchen 25a,25c,30"). Requiring a comma keeps
+// a lone trailing number ("Menü 2") in the name.
+const TRAILING_CODES = /\s+(\d+[a-z]?(?:\s*,\s*\d+[a-z]?)+)\s*$/;
+
 const berlinDay = new Intl.DateTimeFormat('en-CA', {
 	timeZone: 'Europe/Berlin',
 	year: 'numeric',
@@ -39,10 +43,18 @@ function compareCodes(a: string, b: string): number {
 
 export function cleanTitle(raw: string): { name: string; codes: string[] } {
 	const codes = new Set<string>();
-	const stripped = raw.replace(CODE_GROUP, (_match, group: string) => {
+	const collect = (group: string): void => {
 		for (const code of group.split(',')) codes.add(code.trim());
-		return ' ';
-	});
+	};
+	const stripped = raw
+		.replace(CODE_GROUP, (_match, group: string) => {
+			collect(group);
+			return ' ';
+		})
+		.replace(TRAILING_CODES, (_match, group: string) => {
+			collect(group);
+			return '';
+		});
 	// The feed escapes "&" twice; the XML parser undid one level already.
 	const name = stripped.replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
 	return { name, codes: [...codes].sort(compareCodes) };
