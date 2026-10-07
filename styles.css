@@ -214,3 +214,56 @@
 	font-size: var(--font-smallest, 0.8em);
 	color: var(--text-faint);
 }
+
+.canteen-body {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-4-3, 12px);
+}
+
+.canteen-add-panel {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-4-2, 8px);
+	padding: var(--size-4-3, 12px);
+	border-radius: var(--radius-m, 8px);
+	background: var(--background-secondary);
+}
+
+.canteen-add-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.canteen-add-title {
+	font-weight: var(--font-semibold, 600);
+}
+
+.canteen-add-input {
+	width: 100%;
+	min-height: 44px;
+}
+
+.canteen-add-results {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-4-2, 8px);
+}
+
+.canteen-add-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--size-4-3, 12px);
+}
+
+.canteen-add-row-text {
+	min-width: 0;
+}
+
+.canteen-add-row-source,
+.canteen-add-status {
+	font-size: var(--font-smaller, 0.9em);
+	color: var(--text-muted);
+}

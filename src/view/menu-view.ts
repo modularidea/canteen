@@ -2,6 +2,7 @@ import { ItemView, Menu, WorkspaceLeaf, setIcon } from 'obsidian';
 import { LoadResult, MenuService } from '../service/menu-service';
 import { CanteenSettings } from '../settings';
 import { CanteenRef, Meal, ProviderError } from '../types';
+import { renderAddCanteenPanel } from '../ui/add-canteen-panel';
 import { renderDayBar } from '../ui/day-bar';
 import { renderMealCard } from '../ui/meal-card';
 import { errorMessage, renderState } from '../ui/state-message';
@@ -27,6 +28,10 @@ export class CanteenMenuView extends ItemView {
 	private userPickedDay = false;
 	private loadToken = 0;
 	private midnightTimer?: number;
+	private headerEl!: HTMLElement;
+	private panelEl!: HTMLElement;
+	private bodyEl!: HTMLElement;
+	private addPanelOpen = false;
 
 	constructor(leaf: WorkspaceLeaf, private readonly host: ViewHost) {
 		super(leaf);
@@ -46,6 +51,10 @@ export class CanteenMenuView extends ItemView {
 
 	async onOpen(): Promise<void> {
 		this.contentEl.addClass('canteen-menu-view');
+		// The add panel lives outside render() so reloads never wipe what the user is typing.
+		this.headerEl = this.contentEl.createDiv();
+		this.panelEl = this.contentEl.createDiv();
+		this.bodyEl = this.contentEl.createDiv({ cls: 'canteen-body' });
 		// The service decides via the cache rule whether this really hits the network.
 		this.registerEvent(
 			this.app.workspace.on('active-leaf-change', (leaf) => {
@@ -125,14 +134,44 @@ export class CanteenMenuView extends ItemView {
 		void this.loadCanteen();
 	}
 
+	private openAddPanel(): void {
+		if (this.addPanelOpen) {
+			this.panelEl.querySelector('input')?.focus();
+			return;
+		}
+		this.addPanelOpen = true;
+		this.panelEl.empty();
+		renderAddCanteenPanel(this.panelEl, {
+			verify: (c) => this.host.service.verify(c),
+			isAdded: (id) => this.host.settings.favorites.some((f) => f.id === id),
+			onClose: () => this.closeAddPanel(),
+			onAdd: (c) => this.addCanteen(c),
+		});
+	}
+
+	private closeAddPanel(): void {
+		this.addPanelOpen = false;
+		this.panelEl.empty();
+	}
+
+	private addCanteen(canteen: CanteenRef): void {
+		const { settings } = this.host;
+		if (!settings.favorites.some((f) => f.id === canteen.id)) settings.favorites.push(canteen);
+		this.closeAddPanel();
+		this.selectCanteen(canteen.id);
+	}
+
 	private render(): void {
-		const root = this.contentEl;
+		const root = this.bodyEl;
 		root.empty();
+		this.headerEl.empty();
 		const canteen = this.canteen;
 
-		this.renderHeader(root, canteen);
+		this.renderHeader(this.headerEl, canteen);
 		if (!canteen) {
 			renderState(root, 'no-canteen');
+			const add = root.createEl('button', { cls: 'mod-cta', text: 'Add canteen' });
+			add.addEventListener('click', () => this.openAddPanel());
 			return;
 		}
 		if (!this.result) {
@@ -185,6 +224,7 @@ export class CanteenMenuView extends ItemView {
 		setIcon(more, 'more-vertical');
 		more.addEventListener('click', (evt) => {
 			const menu = new Menu();
+			menu.addItem((item) => item.setTitle('Add canteen').setIcon('plus').onClick(() => this.openAddPanel()));
 			if (canteen) {
 				menu.addItem((item) =>
 					item
