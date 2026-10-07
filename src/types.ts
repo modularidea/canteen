@@ -27,7 +27,8 @@ export interface MenuDay {
 	meals: Meal[];
 }
 
-export type ProviderId = 'seezeit';
+export const PROVIDER_IDS = ['seezeit'] as const;
+export type ProviderId = (typeof PROVIDER_IDS)[number];
 
 export interface CanteenRef {
 	id: string;
