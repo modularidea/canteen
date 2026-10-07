@@ -1,5 +1,6 @@
 import { XMLParser } from 'fast-xml-parser';
-import { Diet, Meal, MealNote, MenuDay, PriceRole, ProviderError } from '../../types';
+import { Diet, Meal, MenuDay, PriceRole, ProviderError } from '../../types';
+import { describeCode } from './legend';
 
 // Seezeit publishes its plan through the Max Manager XML feed. The feed is
 // undocumented, so everything here fails loudly with ProviderError('parse')
@@ -64,10 +65,6 @@ function parseCents(value: unknown): number | undefined {
 	return Number.isFinite(n) ? Math.round(n * 100) : undefined;
 }
 
-function toNote(code: string): MealNote {
-	return { code, label: code, kind: 'unknown' };
-}
-
 type RawItem = Record<string, unknown>;
 
 function parseItem(item: RawItem): Meal | undefined {
@@ -85,7 +82,7 @@ function parseItem(item: RawItem): Meal | undefined {
 		rawTitle,
 		pricesCents,
 		diet: dietFromIcons(String(item.icons ?? '')),
-		notes: codes.map(toNote),
+		notes: codes.map(describeCode),
 	};
 }
 
