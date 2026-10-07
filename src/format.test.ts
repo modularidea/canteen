@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { formatDayLabel, formatPrice } from './format';
+import { formatAge, formatDayLabel, formatPrice, formatWeekdayShort } from './format';
 
 const normalize = (s: string) => s.replace(/ | /g, ' ');
 
@@ -26,5 +26,25 @@ describe('formatDayLabel', () => {
 			if (original === undefined) delete process.env.TZ;
 			else process.env.TZ = original;
 		}
+	});
+});
+
+describe('formatWeekdayShort', () => {
+	it('returns the abbreviated weekday of a YYYY-MM-DD key', () => {
+		expect(formatWeekdayShort('2026-10-07', 'en-GB')).toBe('Wed');
+		expect(formatWeekdayShort('2026-10-05', 'de-DE')).toBe('Mo');
+	});
+});
+
+describe('formatAge', () => {
+	const now = Date.UTC(2026, 9, 7, 12, 0, 0);
+	it('describes minutes, hours and days in the given locale', () => {
+		expect(formatAge(now - 30 * 1000, now, 'en-GB')).toBe('this minute');
+		expect(formatAge(now - 10 * 60 * 1000, now, 'en-GB')).toBe('10 minutes ago');
+		expect(formatAge(now - 5 * 3600 * 1000, now, 'en-GB')).toBe('5 hours ago');
+		expect(formatAge(now - 3 * 24 * 3600 * 1000, now, 'en-GB')).toBe('3 days ago');
+	});
+	it('never produces a negative age when the clock went back', () => {
+		expect(formatAge(now + 3600 * 1000, now, 'en-GB')).toBe('this minute');
 	});
 });

@@ -1,1 +1,216 @@
-/* Canteen Menu styles — Obsidian design tokens only. */
+/* Canteen Menu styles — Obsidian design tokens only; the fallbacks mirror Obsidian's defaults. */
+
+.canteen-menu-view {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-4-3, 12px);
+	padding: var(--size-4-3, 12px);
+}
+
+.canteen-header {
+	display: flex;
+	align-items: center;
+	gap: var(--size-4-1, 4px);
+}
+
+.canteen-select,
+.canteen-select-placeholder {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.canteen-select-placeholder {
+	font-weight: var(--font-semibold, 600);
+}
+
+.canteen-header .clickable-icon {
+	min-width: 44px;
+	min-height: 44px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.canteen-refresh.is-spinning svg {
+	animation: canteen-spin 0.8s linear infinite;
+}
+
+@keyframes canteen-spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.canteen-refresh.is-spinning svg {
+		animation: none;
+	}
+}
+
+.canteen-daybar {
+	display: flex;
+	align-items: center;
+	gap: var(--size-4-1, 4px);
+}
+
+.canteen-day-arrow {
+	min-width: 44px;
+	min-height: 44px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.canteen-day-chips {
+	display: flex;
+	flex: 1 1 auto;
+	gap: var(--size-4-1, 4px);
+	overflow-x: auto;
+	scrollbar-width: none;
+}
+
+.canteen-day-chip {
+	display: flex;
+	flex: 0 0 auto;
+	flex-direction: column;
+	align-items: center;
+	min-width: 56px;
+	min-height: 44px;
+	padding: var(--size-2-2, 4px) var(--size-4-2, 8px);
+	border-radius: var(--radius-m, 8px);
+	background: var(--background-secondary);
+	box-shadow: none;
+}
+
+.canteen-day-chip.is-today {
+	border: 1px solid var(--interactive-accent);
+}
+
+.canteen-day-chip.is-selected {
+	background: var(--interactive-accent);
+	color: var(--text-on-accent);
+}
+
+.canteen-day-chip-weekday {
+	font-weight: var(--font-semibold, 600);
+}
+
+.canteen-day-chip-date {
+	font-size: var(--font-smallest, 0.8em);
+	opacity: 0.8;
+}
+
+.canteen-meals {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-4-3, 12px);
+}
+
+.canteen-category {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-4-2, 8px);
+}
+
+.canteen-category-title {
+	font-size: var(--font-smaller, 0.9em);
+	font-weight: var(--font-semibold, 600);
+	color: var(--text-muted);
+	text-transform: none;
+}
+
+.canteen-meal {
+	padding: var(--size-4-2, 8px) var(--size-4-3, 12px);
+	border-radius: var(--radius-m, 8px);
+	background: var(--background-secondary);
+}
+
+.canteen-meal-top {
+	display: flex;
+	justify-content: space-between;
+	gap: var(--size-4-3, 12px);
+}
+
+.canteen-meal-name {
+	min-width: 0;
+	overflow-wrap: anywhere;
+}
+
+.canteen-meal-price {
+	flex: 0 0 auto;
+	font-weight: var(--font-semibold, 600);
+	font-variant-numeric: tabular-nums;
+}
+
+.canteen-meal-badges {
+	display: flex;
+	gap: var(--size-4-1, 4px);
+	margin-top: var(--size-2-2, 4px);
+}
+
+.canteen-badge {
+	padding: 0 var(--size-4-2, 8px);
+	border-radius: var(--radius-l, 12px);
+	font-size: var(--font-smallest, 0.8em);
+	background: var(--background-modifier-border);
+}
+
+.canteen-badge.is-vegan {
+	background: var(--color-green);
+	color: var(--text-on-accent);
+}
+
+.canteen-badge.is-vegetarian {
+	background: var(--color-yellow);
+	color: var(--text-on-accent);
+}
+
+.canteen-meal-notes {
+	margin-top: var(--size-2-2, 4px);
+	font-size: var(--font-smaller, 0.9em);
+	color: var(--text-muted);
+}
+
+.canteen-meal-note-title {
+	font-weight: var(--font-semibold, 600);
+}
+
+.canteen-state {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--size-4-2, 8px);
+	padding: var(--size-4-3, 12px);
+	color: var(--text-muted);
+}
+
+.canteen-state.is-error {
+	color: var(--text-error);
+}
+
+.canteen-banner {
+	padding: var(--size-4-2, 8px) var(--size-4-3, 12px);
+	border-radius: var(--radius-m, 8px);
+	background: var(--background-modifier-error-hover, var(--background-secondary));
+	font-size: var(--font-smaller, 0.9em);
+}
+
+.canteen-skeleton {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-4-2, 8px);
+}
+
+.canteen-skeleton-line {
+	height: 48px;
+	border-radius: var(--radius-m, 8px);
+	background: var(--background-secondary);
+}
+
+.canteen-footer {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-2-2, 4px);
+	font-size: var(--font-smallest, 0.8em);
+	color: var(--text-faint);
+}
