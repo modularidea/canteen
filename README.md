@@ -37,6 +37,7 @@ The plugin only talks to the data sources of the canteens you add, and only to l
 - The menu is loaded **directly from the published menu data to your device**. There is no server of mine in between, and nothing is uploaded, tracked or sent anywhere else.
 - OpenMensa search loads the public canteen list once per session and checks the best matches for upcoming menu data.
 - Menus are downloaded about once per week and kept in the plugin's local data file. The refresh button forces a download. If a download fails, the last saved menu is shown with its age.
+- The clipboard is written only when you press **Copy link** in the settings (the shortcut link); it is never read.
 - Menu data is shown for **personal use only** and always with its source. Menu photos are not displayed.
 
 ## Disclaimer

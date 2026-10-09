@@ -71,12 +71,3 @@ export function reorderFavorite(settings: CanteenSettings, from: number, to: num
 	list.splice(to, 0, list.splice(from, 1)[0] as CanteenRef);
 	settings.favorites = list;
 }
-
-export function moveFavorite(settings: CanteenSettings, id: string, delta: 1 | -1): void {
-	const index = settings.favorites.findIndex((f) => f.id === id);
-	const target = index + delta;
-	if (index < 0 || target < 0 || target >= settings.favorites.length) return;
-	const list = [...settings.favorites];
-	[list[index], list[target]] = [list[target] as CanteenRef, list[index] as CanteenRef];
-	settings.favorites = list;
-}

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { CanteenRef } from './types';
-import { DEFAULT_SETTINGS, CanteenSettings, moveFavorite, normalizeSettings, removeFavorite, reorderFavorite } from './settings';
+import { DEFAULT_SETTINGS, CanteenSettings, normalizeSettings, removeFavorite, reorderFavorite } from './settings';
 
 const htwg: CanteenRef = {
 	id: 'seezeit:mensa_htwg',
@@ -84,24 +84,6 @@ describe('removeFavorite', () => {
 	it('ignores an unknown id', () => {
 		const s = make();
 		removeFavorite(s, 'nope');
-		expect(s).toEqual(make());
-	});
-});
-
-describe('moveFavorite', () => {
-	it('swaps a favorite with its neighbour', () => {
-		const s = make();
-		moveFavorite(s, htwg.id, 1);
-		expect(s.favorites.map((f) => f.id)).toEqual([other.id, htwg.id]);
-		moveFavorite(s, htwg.id, -1);
-		expect(s.favorites.map((f) => f.id)).toEqual([htwg.id, other.id]);
-	});
-
-	it('does nothing at the edges or for an unknown id', () => {
-		const s = make();
-		moveFavorite(s, htwg.id, -1);
-		moveFavorite(s, other.id, 1);
-		moveFavorite(s, 'nope', 1);
 		expect(s).toEqual(make());
 	});
 });
