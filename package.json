@@ -1,6 +1,6 @@
 {
 	"name": "canteen",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"description": "Today's menu of your canteen or mensa in the sidebar: Seezeit, Studierendenwerk Erlangen-Nürnberg and OpenMensa.",
 	"main": "main.js",
 	"type": "module",
