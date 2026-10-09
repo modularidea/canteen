@@ -1,15 +1,21 @@
 import { Plugin, requestUrl } from 'obsidian';
+import { DEEPLINK_ACTION, findFavorite } from './deeplink';
+import { fauProvider } from './providers/fau/provider';
+import { OpenMensaDirectory } from './providers/openmensa/directory';
+import { openMensaProvider } from './providers/openmensa/provider';
 import { seezeitProvider } from './providers/seezeit/provider';
 import { CachedPlan } from './service/freshness';
 import { CacheStore, MenuService } from './service/menu-service';
 import { CanteenSettings, normalizeSettings } from './settings';
 import { CanteenSettingTab } from './settings-tab';
-import { HttpGet } from './types';
+import { CanteenRef, HttpGet } from './types';
+import { todayKey } from './view/day-select';
 import { CANTEEN_VIEW_TYPE, CanteenMenuView, ViewHost } from './view/menu-view';
 
 export default class CanteenMenuPlugin extends Plugin implements ViewHost {
 	settings!: CanteenSettings;
 	service!: MenuService;
+	private openMensa!: OpenMensaDirectory;
 
 	async onload() {
 		this.settings = normalizeSettings(await this.loadData());
@@ -26,7 +32,9 @@ export default class CanteenMenuPlugin extends Plugin implements ViewHost {
 				await this.saveData(this.settings);
 			},
 		};
-		this.service = new MenuService({ get, providers: { seezeit: seezeitProvider }, store, now: () => Date.now() });
+		this.service = new MenuService({ get, providers: { seezeit: seezeitProvider, fau: fauProvider, openmensa: openMensaProvider }, store, now: () => Date.now() });
+
+		this.openMensa = new OpenMensaDirectory(get, () => todayKey(new Date()));
 
 		this.registerView(CANTEEN_VIEW_TYPE, (leaf) => new CanteenMenuView(leaf, this));
 		this.addRibbonIcon('utensils', 'Open canteen menu', () => {
@@ -39,13 +47,34 @@ export default class CanteenMenuPlugin extends Plugin implements ViewHost {
 				void this.activateView();
 			},
 		});
+		// Deep link for shortcuts: obsidian://canteen-menu?vault=<name>[&canteen=<id or name>]
+		this.registerObsidianProtocolHandler(DEEPLINK_ACTION, (params) => {
+			void this.openFromLink(params.canteen);
+		});
 		this.addSettingTab(new CanteenSettingTab(this.app, this));
+	}
+
+	searchOpenMensa(query: string): Promise<CanteenRef[]> {
+		return this.openMensa.search(query);
+	}
+
+	async lookupOpenMensa(canteen: CanteenRef): Promise<CanteenRef> {
+		return (await this.openMensa.lookup(canteen.ref)) ?? canteen;
 	}
 
 	async saveSettings(): Promise<void> {
 		await this.saveData(this.settings);
 		for (const leaf of this.app.workspace.getLeavesOfType(CANTEEN_VIEW_TYPE)) {
 			if (leaf.view instanceof CanteenMenuView) leaf.view.refresh();
+		}
+	}
+
+	private async openFromLink(canteen: string | undefined): Promise<void> {
+		await this.activateView();
+		const match = findFavorite(this.settings.favorites, canteen);
+		if (!match) return;
+		for (const leaf of this.app.workspace.getLeavesOfType(CANTEEN_VIEW_TYPE)) {
+			if (leaf.view instanceof CanteenMenuView) leaf.view.showCanteen(match.id);
 		}
 	}
 

@@ -37,10 +37,38 @@ describe('resolveCanteenUrl', () => {
 		});
 	});
 
+	it('resolves an Erlangen-Nürnberg feed URL to the catalog entry, also the English variant', () => {
+		const sued = CATALOG.find((c) => c.id === 'fau:mensa-sued');
+		const base = 'https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/xml';
+		expect(resolveCanteenUrl(`${base}/mensa-sued.xml`)).toEqual(sued);
+		expect(resolveCanteenUrl(`${base}/en/mensa-sued.xml`)).toEqual(sued);
+	});
+
+	it('builds a provisional entry for an unknown Erlangen-Nürnberg slug and keeps its hyphens', () => {
+		expect(
+			resolveCanteenUrl('https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/xml/cafeteria-chemikum.xml'),
+		).toEqual({
+			id: 'fau:cafeteria-chemikum',
+			provider: 'fau',
+			ref: 'cafeteria-chemikum',
+			name: 'Cafeteria chemikum',
+			city: '',
+			sourceName: 'Studierendenwerk Erlangen-Nürnberg',
+			sourceUrl: 'https://www.werkswelt.de/',
+		});
+	});
+
 	it('returns undefined for anything else', () => {
 		expect(resolveCanteenUrl('https://example.com/')).toBeUndefined();
 		expect(resolveCanteenUrl('https://seezeit.com/')).toBeUndefined();
 		expect(resolveCanteenUrl('mensa')).toBeUndefined();
 		expect(resolveCanteenUrl('')).toBeUndefined();
+	});
+
+	it('resolves OpenMensa page and API URLs to a provisional entry', () => {
+		for (const url of ['https://openmensa.org/c/6', 'https://openmensa.org/c/6/', 'https://openmensa.org/api/v2/canteens/6/days', 'http://www.openmensa.org/canteens/6']) {
+			expect(resolveCanteenUrl(url)).toMatchObject({ id: 'openmensa:6', provider: 'openmensa', ref: '6', sourceUrl: 'https://openmensa.org/c/6' });
+		}
+		expect(resolveCanteenUrl('https://openmensa.org/')).toBeUndefined();
 	});
 });

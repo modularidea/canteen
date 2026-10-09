@@ -17,8 +17,8 @@ export function renderDayBar(
 	today: string,
 	onSelect: (date: string) => void,
 ): void {
-	// Days without meals (typically the weekend) only add noise, unless they are selected or today.
-	days = days.filter((d) => d.meals.length > 0 || d.date === selected || d.date === today);
+	// Past days and empty days (typically the weekend) only add noise, unless selected or today.
+	days = days.filter((d) => d.date === selected || d.date === today || (d.date > today && d.meals.length > 0));
 	const bar = parent.createDiv({ cls: 'canteen-daybar' });
 	arrow(bar, 'chevron-left', 'Previous day', shiftDay(days, selected, -1), onSelect);
 

@@ -1,4 +1,5 @@
-import { App, Plugin, PluginSettingTab, Setting } from 'obsidian';
+import { App, Notice, Plugin, PluginSettingTab, Setting } from 'obsidian';
+import { buildDeeplink } from './deeplink';
 import { CanteenSettings, moveFavorite, removeFavorite } from './settings';
 import { PriceRole } from './types';
 
@@ -30,6 +31,17 @@ export class CanteenSettingTab extends PluginSettingTab {
 						settings.priceRole = value as PriceRole;
 						await this.host.saveSettings();
 					}),
+			);
+
+		const link = buildDeeplink(this.app.vault.getName());
+		new Setting(containerEl)
+			.setName('Shortcut link')
+			.setDesc(`Opens the menu from outside Obsidian, e.g. as a shortcut or home screen icon. Add &canteen=<name> to pick a canteen. ${link}`)
+			.addButton((b) =>
+				b.setButtonText('Copy link').onClick(async () => {
+					await navigator.clipboard.writeText(link);
+					new Notice('Link copied');
+				}),
 			);
 
 		new Setting(containerEl).setName('Saved canteens').setHeading();

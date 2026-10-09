@@ -16,10 +16,13 @@ export interface ViewHost {
 	readonly settings: CanteenSettings;
 	readonly service: MenuService;
 	saveSettings(): Promise<void>;
+	searchOpenMensa(query: string): Promise<CanteenRef[]>;
+	lookupOpenMensa(canteen: CanteenRef): Promise<CanteenRef>;
 }
 
 const MIN_SPIN_MS = 500;
 const MIDNIGHT_GRACE_MS = 2000;
+const BANNER_MS = 5000;
 
 export class CanteenMenuView extends ItemView {
 	private result?: LoadResult;
@@ -29,6 +32,8 @@ export class CanteenMenuView extends ItemView {
 	private userPickedDay = false;
 	private loadToken = 0;
 	private midnightTimer?: number;
+	private bannerTimer?: number;
+	private bannerHidden = false;
 	private headerEl!: HTMLElement;
 	private panelEl!: HTMLElement;
 	private bodyEl!: HTMLElement;
@@ -68,6 +73,7 @@ export class CanteenMenuView extends ItemView {
 
 	async onClose(): Promise<void> {
 		if (this.midnightTimer !== undefined) window.clearTimeout(this.midnightTimer);
+		if (this.bannerTimer !== undefined) window.clearTimeout(this.bannerTimer);
 	}
 
 	/** Re-render with current settings (price tier, favorites) without refetching. */
@@ -123,6 +129,8 @@ export class CanteenMenuView extends ItemView {
 		this.loading = false;
 		this.ensureDay();
 		if (!force && !failed && sameResult(previous, this.result) && previousDate === this.selectedDate) return;
+		// A fresh render after a load shows the stale banner again, for another few seconds.
+		this.bannerHidden = false;
 		this.render();
 	}
 
@@ -130,6 +138,11 @@ export class CanteenMenuView extends ItemView {
 		const days = this.result?.days ?? [];
 		const stillThere = this.selectedDate !== undefined && days.some((d) => d.date === this.selectedDate);
 		if (!this.userPickedDay || !stillThere) this.selectedDate = pickDefaultDay(days, todayKey(new Date()));
+	}
+
+	/** Switches to a saved canteen, e.g. from a deep link; no-op if it is already shown. */
+	showCanteen(id: string): void {
+		if (this.canteen?.id !== id) this.selectCanteen(id);
 	}
 
 	private selectCanteen(id: string): void {
@@ -151,6 +164,8 @@ export class CanteenMenuView extends ItemView {
 		this.panelEl.empty();
 		renderAddCanteenPanel(this.panelEl, {
 			verify: (c) => this.host.service.verify(c),
+			searchOnline: (q) => this.host.searchOpenMensa(q),
+			refine: (c) => this.host.lookupOpenMensa(c),
 			isAdded: (id) => this.host.settings.favorites.some((f) => f.id === id),
 			onClose: () => this.closeAddPanel(),
 			onAdd: (c) => this.addCanteen(c),
@@ -188,8 +203,9 @@ export class CanteenMenuView extends ItemView {
 			return this.renderFooter(root, canteen);
 		}
 
-		if (this.result.stale) {
+		if (this.result.stale && !this.bannerHidden) {
 			renderState(root, 'stale', { fetchedAt: this.result.fetchedAt, message: this.error ? errorMessage(this.error) : undefined });
+			this.autoHideBanner(root);
 		}
 		const { days } = this.result;
 		if (days.length === 0 || this.selectedDate === undefined) {
@@ -206,6 +222,16 @@ export class CanteenMenuView extends ItemView {
 			else this.renderMeals(root, meals);
 		}
 		this.renderFooter(root, canteen);
+	}
+
+	/** The stale banner is transient; the cached menu stays, only the notice goes. */
+	private autoHideBanner(root: HTMLElement): void {
+		if (this.bannerTimer !== undefined) return;
+		this.bannerTimer = window.setTimeout(() => {
+			this.bannerTimer = undefined;
+			this.bannerHidden = true;
+			root.querySelector('.canteen-banner')?.remove();
+		}, BANNER_MS);
 	}
 
 	private renderHeader(root: HTMLElement, canteen: CanteenRef | undefined): void {

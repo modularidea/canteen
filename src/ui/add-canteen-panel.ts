@@ -8,7 +8,14 @@ interface AddPanelDeps {
 	onAdd: (canteen: CanteenRef) => void;
 	onClose: () => void;
 	isAdded: (id: string) => boolean;
+	/** Searches the OpenMensa directory; only canteens with upcoming menu data come back. */
+	searchOnline: (query: string) => Promise<CanteenRef[]>;
+	/** Fills in the real name of a canteen resolved from a pasted OpenMensa URL. */
+	refine: (canteen: CanteenRef) => Promise<CanteenRef>;
 }
+
+const ONLINE_DEBOUNCE_MS = 300;
+const ONLINE_MIN_QUERY = 3;
 
 export function renderAddCanteenPanel(parent: HTMLElement, deps: AddPanelDeps): void {
 	const panel = parent.createDiv({ cls: 'canteen-add-panel' });
@@ -27,6 +34,9 @@ export function renderAddCanteenPanel(parent: HTMLElement, deps: AddPanelDeps): 
 	const results = panel.createDiv({ cls: 'canteen-add-results' });
 	const status = panel.createDiv({ cls: 'canteen-add-status' });
 	let busy = false;
+	let timer: number | undefined;
+	// Invalidates answers of earlier keystrokes.
+	let generation = 0;
 
 	const add = async (canteen: CanteenRef) => {
 		if (busy) return;
@@ -54,16 +64,49 @@ export function renderAddCanteenPanel(parent: HTMLElement, deps: AddPanelDeps): 
 		button.addEventListener('click', () => void add(canteen));
 	};
 
+	const searchOnline = async (query: string, shown: Set<string>, mine: number) => {
+		status.setText('Searching OpenMensa…');
+		try {
+			const found = await deps.searchOnline(query);
+			if (mine !== generation) return;
+			status.empty();
+			const fresh = found.filter((c) => !shown.has(c.id));
+			fresh.forEach(row);
+			if (shown.size + fresh.length === 0) status.setText('No canteen with menu data found. Paste the URL of its menu page instead.');
+		} catch {
+			if (mine !== generation) return;
+			status.setText(shown.size > 0 ? '' : 'OpenMensa is not reachable. Check your connection or try again later.');
+		}
+	};
+
+	const resolveUrl = async (canteen: CanteenRef, mine: number) => {
+		const refined = canteen.provider === 'openmensa' ? await deps.refine(canteen) : canteen;
+		if (mine !== generation) return;
+		results.empty();
+		row(refined);
+	};
+
 	input.addEventListener('input', () => {
+		window.clearTimeout(timer);
+		generation++;
+		const mine = generation;
 		results.empty();
 		status.empty();
 		const parsed = parseAddInput(input.value);
 		if (parsed.kind === 'search') {
-			if (parsed.results.length === 0) status.setText('No canteen found. Paste the URL of its menu page instead.');
 			parsed.results.forEach(row);
+			const query = input.value.trim();
+			if (query.length < ONLINE_MIN_QUERY) {
+				if (parsed.results.length === 0) status.setText('No canteen found. Paste the URL of its menu page instead.');
+				return;
+			}
+			const shown = new Set(parsed.results.map((c) => c.id));
+			timer = window.setTimeout(() => void searchOnline(query, shown, mine), ONLINE_DEBOUNCE_MS);
 		} else if (parsed.kind === 'url') {
-			if (parsed.canteen) row(parsed.canteen);
-			else status.setText('This source is not supported yet. Search by name, or request support in the plugin repository.');
+			if (parsed.canteen) {
+				row(parsed.canteen);
+				void resolveUrl(parsed.canteen, mine);
+			} else status.setText('This source is not supported yet. Search by name, or request support in the plugin repository.');
 		}
 	});
 	input.focus();

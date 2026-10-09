@@ -1,0 +1,220 @@
+[
+ {
+  "date": "2026-10-09",
+  "closed": false,
+  "meals": [
+   {
+    "id": 28896395,
+    "name": "Hausgemachte Pasta, Pesto Rosso",
+    "category": "FRIENDS",
+    "prices": {
+     "students": 2.0,
+     "employees": 4.5,
+     "pupils": null,
+     "others": 6.4
+    },
+    "notes": [
+     "vegan",
+     "mit Knoblauch"
+    ]
+   },
+   {
+    "id": 28896396,
+    "name": "Hähnchenkeule, Geflügelrahmsauce, Erbsen-Maisgemüse, Bulgur",
+    "category": "MEER",
+    "prices": {
+     "students": 3.8,
+     "employees": 6.5,
+     "pupils": null,
+     "others": 8.1
+    },
+    "notes": [
+     "enthält Geflügelfleisch",
+     "enthält Milch und Milcherzeugnisse",
+     "enthält Sellerie und Sellerieerzeugnisse"
+    ]
+   },
+   {
+    "id": 28896397,
+    "name": "Salatteller, hausgemachtes pflanzliches cremiges Dressing, Vegane Nuggets, Chili Jam, Weizenbaguette",
+    "category": "VEGAN",
+    "prices": {
+     "students": 3.6,
+     "employees": 6.3,
+     "pupils": null,
+     "others": 7.9
+    },
+    "notes": [
+     "vegan",
+     "mit Geschmacksverstärker",
+     "Niedersachsen",
+     "enthält Senf und Senferzeugnisse",
+     "enthält Schwefeldioxid und Sulfite"
+    ]
+   },
+   {
+    "id": 28896398,
+    "name": "Mac'n'cheese Burger, Cocktailsauce, Spicy Wedges",
+    "category": "EVERGREENS",
+    "prices": {
+     "students": 4.6,
+     "employees": 7.0,
+     "pupils": null,
+     "others": 8.6
+    },
+    "notes": [
+     "ohne Fleisch",
+     "enthält Eier und Eiererzeugnisse",
+     "enthält Milch und Milcherzeugnisse",
+     "enthält Senf und Senferzeugnisse"
+    ]
+   },
+   {
+    "id": 28896399,
+    "name": "Schokopudding",
+    "category": "SÜSSE ECKE",
+    "prices": {
+     "students": 0.9,
+     "employees": 1.3,
+     "pupils": null,
+     "others": 1.7
+    },
+    "notes": [
+     "ohne Fleisch",
+     "enthält Milch und Milcherzeugnisse"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-12",
+  "closed": false,
+  "meals": [
+   {
+    "id": 29016345,
+    "name": "Hausgemachte Pasta, Tomaten-Oliven-Pesto",
+    "category": "FRIENDS",
+    "prices": {
+     "students": 2.0,
+     "employees": 4.5,
+     "pupils": null,
+     "others": 6.4
+    },
+    "notes": [
+     "vegan",
+     "mit Knoblauch",
+     "geschwärzt",
+     "mit Antioxidationsmittel",
+     "enthält Schwefeldioxid und Sulfite"
+    ]
+   },
+   {
+    "id": 29016346,
+    "name": "Kalbsragout Marengo mit Champignons, Karotten, Semmelknödel",
+    "category": "MEER",
+    "prices": {
+     "students": 3.8,
+     "employees": 6.5,
+     "pupils": null,
+     "others": 8.1
+    },
+    "notes": [
+     "enthält Rindfleisch",
+     "mit Alkohol",
+     "mit Knoblauch",
+     "enthält Eier und Eiererzeugnisse",
+     "enthält Milch und Milcherzeugnisse",
+     "enthält Schwefeldioxid und Sulfite"
+    ]
+   },
+   {
+    "id": 29016347,
+    "name": "Gefüllte Fladenbrottasche mit Salat und Falafel, pflanzliches Zaziki",
+    "category": "VEGAN",
+    "prices": {
+     "students": 3.6,
+     "employees": 6.3,
+     "pupils": null,
+     "others": 7.9
+    },
+    "notes": [
+     "vegan",
+     "mit Knoblauch",
+     "Niedersachsen",
+     "enthält Sesamsamen"
+    ]
+   },
+   {
+    "id": 29016348,
+    "name": "Geflügelcurrywurst, Curryketchup, Pommes frites",
+    "category": "EVERGREENS",
+    "prices": {
+     "students": 4.0,
+     "employees": 4.8,
+     "pupils": null,
+     "others": 5.5
+    },
+    "notes": [
+     "enthält Geflügelfleisch",
+     "mit Konservierungsstoff",
+     "mit Antioxidationsmittel",
+     "mit Phosphat",
+     "mit Nitritpökelsalz und Nitrat",
+     "enthält Sellerie und Sellerieerzeugnisse",
+     "enthält Senf und Senferzeugnisse"
+    ]
+   },
+   {
+    "id": 29016349,
+    "name": "Strohschwein-Currywurst, Curryketchup, Pommes frites",
+    "category": "EVERGREENS",
+    "prices": {
+     "students": 4.0,
+     "employees": 4.8,
+     "pupils": null,
+     "others": 5.5
+    },
+    "notes": [
+     "enthält Schweinefleisch",
+     "mit Konservierungsstoff",
+     "mit Antioxidationsmittel",
+     "mit Phosphat",
+     "enthält Sellerie und Sellerieerzeugnisse",
+     "enthält Senf und Senferzeugnisse"
+    ]
+   },
+   {
+    "id": 29016350,
+    "name": "Vegane Currywurst, Curryketchup, Pommes frites",
+    "category": "EVERGREENS",
+    "prices": {
+     "students": 4.6,
+     "employees": 6.2,
+     "pupils": null,
+     "others": 6.9
+    },
+    "notes": [
+     "vegan",
+     "mit Konservierungsstoff",
+     "mit Antioxidationsmittel",
+     "enthält Sellerie und Sellerieerzeugnisse",
+     "enthält Senf und Senferzeugnisse"
+    ]
+   },
+   {
+    "id": 29016351,
+    "name": "Kokosmilchreis, Erdbeersauce",
+    "category": "SÜSSE ECKE",
+    "prices": {
+     "students": 0.9,
+     "employees": 1.3,
+     "pupils": null,
+     "others": 1.7
+    },
+    "notes": [
+     "vegan"
+    ]
+   }
+  ]
+ }
+]

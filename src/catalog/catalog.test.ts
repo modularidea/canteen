@@ -10,13 +10,21 @@ describe('CATALOG', () => {
 		expect(refs).not.toContain('themenpark_abendessen');
 	});
 
-	it('has unique ids and the Seezeit source info on every entry', () => {
+	it('has unique ids and the source info of its provider on every entry', () => {
 		expect(new Set(CATALOG.map((c) => c.id)).size).toBe(CATALOG.length);
 		for (const c of CATALOG) {
-			expect(c.provider).toBe('seezeit');
-			expect(c.id).toBe(`seezeit:${c.ref}`);
-			expect(c.sourceUrl).toBe(`https://seezeit.com/essen/speiseplaene/${c.ref.replace(/_/g, '-')}/`);
+			expect(c.id).toBe(`${c.provider}:${c.ref}`);
+			if (c.provider === 'seezeit') {
+				expect(c.sourceUrl).toBe(`https://seezeit.com/essen/speiseplaene/${c.ref.replace(/_/g, '-')}/`);
+			} else {
+				expect(c.sourceName).toBe('Studierendenwerk Erlangen-Nürnberg');
+			}
 		}
+	});
+
+	it('contains the verified Erlangen-Nürnberg canteens', () => {
+		const refs = CATALOG.filter((c) => c.provider === 'fau').map((c) => c.ref);
+		expect(refs).toEqual(expect.arrayContaining(['mensa-sued', 'mensa-lmp', 'mensa-ansbach', 'mensa-eichstaett']));
 	});
 });
 
@@ -31,7 +39,12 @@ describe('searchCatalog', () => {
 	});
 
 	it('returns every entry for the operator name "seezeit"', () => {
-		expect(searchCatalog('seezeit')).toHaveLength(CATALOG.length);
+		expect(searchCatalog('seezeit')).toHaveLength(CATALOG.filter((c) => c.provider === 'seezeit').length);
+	});
+
+	it('finds the Erlangen canteens by university alias', () => {
+		expect(searchCatalog('fau').map((c) => c.ref)).toEqual(expect.arrayContaining(['mensa-sued', 'mensa-lmp']));
+		expect(searchCatalog('süd')[0]?.ref).toBe('mensa-sued');
 	});
 
 	it('matches aliases such as the university name', () => {

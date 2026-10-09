@@ -1,0 +1,779 @@
+<?xml version='1.0' encoding='utf-8'?>
+<speiseplan locationId='1'>
+<tag timestamp='1791151200'>
+<item>
+<category>Essen 1</category>
+<title>Hacksteak (Wz,Ei,Sen) mit Pilzrahmsoße (1,Wz,Mi,Ge) Kartoffelpüree (7,Mi,Su)</title>
+<description></description>
+<beilagen>Optional: Pommes frites</beilagen>
+<preis1>3,49</preis1>
+<preis2>4,69</preis2>
+<preis3>6,98</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/R.png?v=2&#039; class=&#039;infomax-food-icon R&#039; width=&#039;60&#039; height=&#039;62&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/S.png?v=2&#039; class=&#039;infomax-food-icon S&#039; width=&#039;60&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>1689.0</kj>
+<kcal>403.0</kcal>
+<fett>24.7</fett>
+<gesfett>9.9</gesfett>
+<kh>21.5</kh>
+<zucker>3.4</zucker>
+<ballaststoffe>0.1</ballaststoffe>
+<eiweiss>22.3</eiweiss>
+<salz>4.0</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 2</category>
+<title>Hirtenkäse gebacken (Wz,Mi) mit Ajvar Dip (Wz,Ei,Mi,Sen)</title>
+<description></description>
+<beilagen>Optional: Pommes frites, Kartoffeln</beilagen>
+<preis1>2,96</preis1>
+<preis2>4,16</preis2>
+<preis3>5,92</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/V.png?v=2&#039; class=&#039;infomax-food-icon V&#039; width=&#039;68&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>3789.0</kj>
+<kcal>905.0</kcal>
+<fett>74.3</fett>
+<gesfett>18.3</gesfett>
+<kh>38.0</kh>
+<zucker>9.8</zucker>
+<ballaststoffe>2.1</ballaststoffe>
+<eiweiss>20.8</eiweiss>
+<salz>3.1</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 4</category>
+<title>Süßkartoffel-Curry mit Kichererbsen, Spinat, Basmatireis und Kokosjoghurt (Gf,Sel)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>3,39</preis1>
+<preis2>4,59</preis2>
+<preis3>6,78</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/Gf.png?v=2&#039; class=&#039;infomax-food-icon Gf&#039; width=&#039;30&#039; height=&#039;30&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/veg.png?v=2&#039; class=&#039;infomax-food-icon veg&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/CO2.png?v=2&#039; class=&#039;infomax-food-icon CO2&#039; width=&#039;30&#039; height=&#039;64&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>3707.0</kj>
+<kcal>885.0</kcal>
+<fett>25.3</fett>
+<gesfett>7.8</gesfett>
+<kh>129.0</kh>
+<zucker>15.4</zucker>
+<ballaststoffe>0.0</ballaststoffe>
+<eiweiss>25.9</eiweiss>
+<salz>0.3</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 4</category>
+<title>Süßkartoffel-Curry mit Kichererbsen, Spinat, Basmatireis und Kokosjoghurt (Gf,Sel)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>3,39</preis1>
+<preis2>4,59</preis2>
+<preis3>6,78</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/Gf.png?v=2&#039; class=&#039;infomax-food-icon Gf&#039; width=&#039;30&#039; height=&#039;30&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/veg.png?v=2&#039; class=&#039;infomax-food-icon veg&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/CO2.png?v=2&#039; class=&#039;infomax-food-icon CO2&#039; width=&#039;30&#039; height=&#039;64&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>3706.0</kj>
+<kcal>885.0</kcal>
+<fett>25.3</fett>
+<gesfett>7.8</gesfett>
+<kh>129.0</kh>
+<zucker>15.3</zucker>
+<ballaststoffe>0.0</ballaststoffe>
+<eiweiss>25.8</eiweiss>
+<salz>0.3</salz>
+<foto></foto>
+</item>
+</tag>
+<tag timestamp='1791237600'>
+<item>
+<category>Essen 1</category>
+<title>Gemüseauflauf (1,7,Ei,Mi) mit Kräutersoße (1,Wz,Mi)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>2,59</preis1>
+<preis2>4,57</preis2>
+<preis3>5,18</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/V.png?v=2&#039; class=&#039;infomax-food-icon V&#039; width=&#039;68&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>2256.0</kj>
+<kcal>539.0</kcal>
+<fett>36.3</fett>
+<gesfett>20.8</gesfett>
+<kh>32.7</kh>
+<zucker>11.8</zucker>
+<ballaststoffe>0.2</ballaststoffe>
+<eiweiss>16.9</eiweiss>
+<salz>2.7</salz>
+<foto></foto>
+</item>
+</tag>
+<tag timestamp='1791324000'>
+<item>
+<category>Essen 1</category>
+<title>Tortelloni Ricotta (Wz,Ei,Mi) und Tomatensoße (1,Wz,Sel)</title>
+<description></description>
+<beilagen>Optional: auf Wunsch mit gekochtem Schinken (4,7,12,S)</beilagen>
+<preis1>2,84</preis1>
+<preis2>4,57</preis2>
+<preis3>5,68</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/V.png?v=2&#039; class=&#039;infomax-food-icon V&#039; width=&#039;68&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/CO2.png?v=2&#039; class=&#039;infomax-food-icon CO2&#039; width=&#039;30&#039; height=&#039;64&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>2221.0</kj>
+<kcal>531.0</kcal>
+<fett>10.5</fett>
+<gesfett>4.2</gesfett>
+<kh>84.4</kh>
+<zucker>7.2</zucker>
+<ballaststoffe>0.4</ballaststoffe>
+<eiweiss>20.3</eiweiss>
+<salz>4.1</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 2</category>
+<title>Putenschnitzel paniert mit Zitrone (Wz)</title>
+<description></description>
+<beilagen>Optional: Kartoffelsalat (1,7,9,Sen,Su), Pommes frites</beilagen>
+<preis1>2,98</preis1>
+<preis2>4,18</preis2>
+<preis3>5,96</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/G.png?v=2&#039; class=&#039;infomax-food-icon G&#039; width=&#039;60&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>2076.0</kj>
+<kcal>496.0</kcal>
+<fett>29.8</fett>
+<gesfett>3.5</gesfett>
+<kh>26.4</kh>
+<zucker>2.1</zucker>
+<ballaststoffe>0.4</ballaststoffe>
+<eiweiss>30.7</eiweiss>
+<salz>2.3</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 4</category>
+<title>Sesamnudeln mit Teriyaki-Wokgemüse (9,Wz,So,Sel,Sen,Ses,Su)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>2,79</preis1>
+<preis2>4,57</preis2>
+<preis3>5,58</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/veg.png?v=2&#039; class=&#039;infomax-food-icon veg&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/CO2.png?v=2&#039; class=&#039;infomax-food-icon CO2&#039; width=&#039;30&#039; height=&#039;64&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>2357.0</kj>
+<kcal>563.0</kcal>
+<fett>9.4</fett>
+<gesfett>1.1</gesfett>
+<kh>94.5</kh>
+<zucker>11.4</zucker>
+<ballaststoffe>2.5</ballaststoffe>
+<eiweiss>20.0</eiweiss>
+<salz>3.2</salz>
+<foto></foto>
+</item>
+</tag>
+<tag timestamp='1791410400'>
+<item>
+<category>Essen 1</category>
+<title>Pasta mit Räuchertofu (BIO Bayern Qualität) und Champignons (1,Wz,So)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>2,74</preis1>
+<preis2>4,57</preis2>
+<preis3>5,48</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/V.png?v=2&#039; class=&#039;infomax-food-icon V&#039; width=&#039;68&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/B.png?v=2&#039; class=&#039;infomax-food-icon B&#039; width=&#039;72&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/CO2.png?v=2&#039; class=&#039;infomax-food-icon CO2&#039; width=&#039;30&#039; height=&#039;64&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>2577.0</kj>
+<kcal>616.0</kcal>
+<fett>20.0</fett>
+<gesfett>6.3</gesfett>
+<kh>79.3</kh>
+<zucker>6.9</zucker>
+<ballaststoffe>0.1</ballaststoffe>
+<eiweiss>29.4</eiweiss>
+<salz>2.2</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 2</category>
+<title>Schweinebraten (Wz,Sel) mit Kümmelsoße (1,Wz,Ge)</title>
+<description></description>
+<beilagen>Optional: Sauerkraut, Kloß (7,Su)</beilagen>
+<preis1>2,99</preis1>
+<preis2>4,19</preis2>
+<preis3>5,98</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/S.png?v=2&#039; class=&#039;infomax-food-icon S&#039; width=&#039;60&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>2027.0</kj>
+<kcal>484.0</kcal>
+<fett>30.2</fett>
+<gesfett>12.2</gesfett>
+<kh>13.2</kh>
+<zucker>2.8</zucker>
+<ballaststoffe>1.2</ballaststoffe>
+<eiweiss>39.0</eiweiss>
+<salz>2.4</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 4</category>
+<title>Soja-Mais-Chili (Wz,So,Sel,Sen) mit Paprikareis</title>
+<description></description>
+<beilagen>Optional: Pommes frites</beilagen>
+<preis1>2,98</preis1>
+<preis2>4,57</preis2>
+<preis3>5,96</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/veg.png?v=2&#039; class=&#039;infomax-food-icon veg&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/CO2.png?v=2&#039; class=&#039;infomax-food-icon CO2&#039; width=&#039;30&#039; height=&#039;64&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>3891.0</kj>
+<kcal>929.0</kcal>
+<fett>30.2</fett>
+<gesfett>5.8</gesfett>
+<kh>120.6</kh>
+<zucker>32.9</zucker>
+<ballaststoffe>8.3</ballaststoffe>
+<eiweiss>31.7</eiweiss>
+<salz>3.9</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 8</category>
+<title>Tagliatellemit Räuchertofu (BIO Bayern Qualität) und Champignons (1,Wz,So)</title>
+<description></description>
+<beilagen>Optional: Pommes frites</beilagen>
+<preis1>2,74</preis1>
+<preis2>4,57</preis2>
+<preis3>5,48</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/V.png?v=2&#039; class=&#039;infomax-food-icon V&#039; width=&#039;68&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/B.png?v=2&#039; class=&#039;infomax-food-icon B&#039; width=&#039;72&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/CO2.png?v=2&#039; class=&#039;infomax-food-icon CO2&#039; width=&#039;30&#039; height=&#039;64&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>2577.0</kj>
+<kcal>616.0</kcal>
+<fett>20.0</fett>
+<gesfett>6.3</gesfett>
+<kh>79.3</kh>
+<zucker>6.9</zucker>
+<ballaststoffe>0.1</ballaststoffe>
+<eiweiss>29.4</eiweiss>
+<salz>2.2</salz>
+<foto></foto>
+</item>
+</tag>
+<tag timestamp='1791496800'>
+<item>
+<category>Essen 1</category>
+<title>MSC Schollenfilet gebacken (Wz,Fi) mit Dillmayonnaise (Wz,Ei,Mi,Sen) und Kartoffeln</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>3,78</preis1>
+<preis2>4,98</preis2>
+<preis3>7,56</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/F.png?v=2&#039; class=&#039;infomax-food-icon F&#039; width=&#039;60&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/MSC.png?v=2&#039; class=&#039;infomax-food-icon MSC&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>3271.0</kj>
+<kcal>781.0</kcal>
+<fett>45.6</fett>
+<gesfett>4.1</gesfett>
+<kh>66.4</kh>
+<zucker>7.2</zucker>
+<ballaststoffe>0.6</ballaststoffe>
+<eiweiss>24.9</eiweiss>
+<salz>2.8</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 4</category>
+<title>Kartoffeltaschen gefüllt mit Frischkäse (Mi) mit Quark-Gurken-Dip (Mi,Sen) und gemischtem Salat (1,7,9,Su)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>2,89</preis1>
+<preis2>4,57</preis2>
+<preis3>5,78</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/V.png?v=2&#039; class=&#039;infomax-food-icon V&#039; width=&#039;68&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/CO2.png?v=2&#039; class=&#039;infomax-food-icon CO2&#039; width=&#039;30&#039; height=&#039;64&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>3059.0</kj>
+<kcal>731.0</kcal>
+<fett>51.3</fett>
+<gesfett>10.8</gesfett>
+<kh>54.2</kh>
+<zucker>8.3</zucker>
+<ballaststoffe>6.9</ballaststoffe>
+<eiweiss>13.0</eiweiss>
+<salz>3.6</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 5</category>
+<title>Reispfanne &quot;Espana&quot; mit Gemüse und Oliven (7,10,Gf)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>2,60</preis1>
+<preis2>4,57</preis2>
+<preis3>5,20</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/Gf.png?v=2&#039; class=&#039;infomax-food-icon Gf&#039; width=&#039;30&#039; height=&#039;30&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/veg.png?v=2&#039; class=&#039;infomax-food-icon veg&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/CO2.png?v=2&#039; class=&#039;infomax-food-icon CO2&#039; width=&#039;30&#039; height=&#039;64&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>1731.0</kj>
+<kcal>413.0</kcal>
+<fett>16.1</fett>
+<gesfett>3.3</gesfett>
+<kh>54.4</kh>
+<zucker>9.4</zucker>
+<ballaststoffe>0.8</ballaststoffe>
+<eiweiss>10.6</eiweiss>
+<salz>1.8</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 5</category>
+<title>Reispfanne &quot;Espana&quot; mit Gemüse und Oliven (7,10,Gf)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>2,60</preis1>
+<preis2>4,57</preis2>
+<preis3>5,20</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/Gf.png?v=2&#039; class=&#039;infomax-food-icon Gf&#039; width=&#039;30&#039; height=&#039;30&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/veg.png?v=2&#039; class=&#039;infomax-food-icon veg&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/CO2.png?v=2&#039; class=&#039;infomax-food-icon CO2&#039; width=&#039;30&#039; height=&#039;64&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>1730.0</kj>
+<kcal>413.0</kcal>
+<fett>16.1</fett>
+<gesfett>3.3</gesfett>
+<kh>54.4</kh>
+<zucker>9.4</zucker>
+<ballaststoffe>0.8</ballaststoffe>
+<eiweiss>10.6</eiweiss>
+<salz>1.8</salz>
+<foto></foto>
+</item>
+</tag>
+<tag timestamp='1791756000'>
+<item>
+<category>Essen 1</category>
+<title>Bohnen-Bulgur-Pfanne mit Walnüssen und Paprika-Radieschen Dip (Wz,Ses,Wa)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>3,94</preis1>
+<preis2>5,14</preis2>
+<preis3>7,88</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/veg.png?v=2&#039; class=&#039;infomax-food-icon veg&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/MV.png?v=2&#039; class=&#039;infomax-food-icon MV&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>2542.0</kj>
+<kcal>607.0</kcal>
+<fett>28.3</fett>
+<gesfett>7.8</gesfett>
+<kh>59.5</kh>
+<zucker>11.4</zucker>
+<ballaststoffe>5.0</ballaststoffe>
+<eiweiss>21.6</eiweiss>
+<salz>0.5</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 2</category>
+<title>Hütten Cordon Bleu vom Schwein mit Zitrone (4,7,12,Wz,Ei,Mi)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>3,19</preis1>
+<preis2>4,39</preis2>
+<preis3>6,38</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/S.png?v=2&#039; class=&#039;infomax-food-icon S&#039; width=&#039;60&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>1639.0</kj>
+<kcal>391.0</kcal>
+<fett>19.8</fett>
+<gesfett>5.9</gesfett>
+<kh>24.9</kh>
+<zucker>1.5</zucker>
+<ballaststoffe>0.3</ballaststoffe>
+<eiweiss>28.1</eiweiss>
+<salz>3.8</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 4</category>
+<title>Pasta Peperonato (Wz)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>2,84</preis1>
+<preis2>4,57</preis2>
+<preis3>5,68</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/veg.png?v=2&#039; class=&#039;infomax-food-icon veg&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/CO2.png?v=2&#039; class=&#039;infomax-food-icon CO2&#039; width=&#039;30&#039; height=&#039;64&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>3240.0</kj>
+<kcal>774.0</kcal>
+<fett>39.7</fett>
+<gesfett>5.0</gesfett>
+<kh>84.0</kh>
+<zucker>13.1</zucker>
+<ballaststoffe>1.2</ballaststoffe>
+<eiweiss>18.0</eiweiss>
+<salz>1.3</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 4</category>
+<title>Pasta Peperonato (Wz)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>2,84</preis1>
+<preis2>4,57</preis2>
+<preis3>5,68</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/veg.png?v=2&#039; class=&#039;infomax-food-icon veg&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/CO2.png?v=2&#039; class=&#039;infomax-food-icon CO2&#039; width=&#039;30&#039; height=&#039;64&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>3240.0</kj>
+<kcal>774.0</kcal>
+<fett>39.7</fett>
+<gesfett>5.0</gesfett>
+<kh>84.0</kh>
+<zucker>13.1</zucker>
+<ballaststoffe>1.2</ballaststoffe>
+<eiweiss>18.0</eiweiss>
+<salz>1.3</salz>
+<foto></foto>
+</item>
+<item>
+<category>Pizza Fleisch/Fisch</category>
+<title>Pizza Speziale (4,7,12,Wz,Mi,Ge)  Tomatensoße mit Oregano</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>4,19</preis1>
+<preis2>5,39</preis2>
+<preis3>8,38</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/G.png?v=2&#039; class=&#039;infomax-food-icon G&#039; width=&#039;60&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/S.png?v=2&#039; class=&#039;infomax-food-icon S&#039; width=&#039;60&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>4212.0</kj>
+<kcal>1006.0</kcal>
+<fett>38.4</fett>
+<gesfett>18.4</gesfett>
+<kh>115.5</kh>
+<zucker>14.9</zucker>
+<ballaststoffe>5.6</ballaststoffe>
+<eiweiss>47.7</eiweiss>
+<salz>7.1</salz>
+<foto></foto>
+</item>
+</tag>
+<tag timestamp='1791842400'>
+<item>
+<category>Essen 1</category>
+<title>Putengulasch &quot;TexMex Art&quot; (Wz) mit Ofenkartoffeln</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>3,59</preis1>
+<preis2>4,79</preis2>
+<preis3>7,18</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/G.png?v=2&#039; class=&#039;infomax-food-icon G&#039; width=&#039;60&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>3039.0</kj>
+<kcal>726.0</kcal>
+<fett>34.2</fett>
+<gesfett>3.6</gesfett>
+<kh>50.3</kh>
+<zucker>15.6</zucker>
+<ballaststoffe>5.0</ballaststoffe>
+<eiweiss>38.2</eiweiss>
+<salz>1.7</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 4</category>
+<title>Gebratener Halloumi mit Ajvarcreme und griechischem Nudelsalat (Wz,Mi)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>4,68</preis1>
+<preis2>5,88</preis2>
+<preis3>9,36</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/V.png?v=2&#039; class=&#039;infomax-food-icon V&#039; width=&#039;68&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>2968.0</kj>
+<kcal>709.0</kcal>
+<fett>51.9</fett>
+<gesfett>27.4</gesfett>
+<kh>14.3</kh>
+<zucker>12.3</zucker>
+<ballaststoffe>0.1</ballaststoffe>
+<eiweiss>46.5</eiweiss>
+<salz>4.5</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 5</category>
+<title>Asiatisches Gemüse mit Reis (Gf,So,Sel,Sen) mit Curry-Kokossoße (Sel)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>2,39</preis1>
+<preis2>4,57</preis2>
+<preis3>4,78</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/Gf.png?v=2&#039; class=&#039;infomax-food-icon Gf&#039; width=&#039;30&#039; height=&#039;30&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/veg.png?v=2&#039; class=&#039;infomax-food-icon veg&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/CO2.png?v=2&#039; class=&#039;infomax-food-icon CO2&#039; width=&#039;30&#039; height=&#039;64&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>2456.0</kj>
+<kcal>587.0</kcal>
+<fett>27.1</fett>
+<gesfett>14.3</gesfett>
+<kh>70.4</kh>
+<zucker>9.0</zucker>
+<ballaststoffe>0.7</ballaststoffe>
+<eiweiss>12.5</eiweiss>
+<salz>2.6</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 5</category>
+<title>Asiatisches Gemüse mit Reis (Gf,So,Sel,Sen) mit Curry-Kokossoße (Sel)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>2,39</preis1>
+<preis2>4,57</preis2>
+<preis3>4,78</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/Gf.png?v=2&#039; class=&#039;infomax-food-icon Gf&#039; width=&#039;30&#039; height=&#039;30&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/veg.png?v=2&#039; class=&#039;infomax-food-icon veg&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/CO2.png?v=2&#039; class=&#039;infomax-food-icon CO2&#039; width=&#039;30&#039; height=&#039;64&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>2457.0</kj>
+<kcal>587.0</kcal>
+<fett>27.1</fett>
+<gesfett>14.3</gesfett>
+<kh>70.4</kh>
+<zucker>9.0</zucker>
+<ballaststoffe>0.7</ballaststoffe>
+<eiweiss>12.5</eiweiss>
+<salz>2.5</salz>
+<foto></foto>
+</item>
+</tag>
+<tag timestamp='1791928800'>
+<item>
+<category>Essen 1</category>
+<title>Köttbullar mit Preiselbeeren (R,S), Rahmsoße (Wz,Mi,Ge) und Kartoffelpüree (7,Mi,Su)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>3,12</preis1>
+<preis2>4,57</preis2>
+<preis3>6,24</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/R.png?v=2&#039; class=&#039;infomax-food-icon R&#039; width=&#039;60&#039; height=&#039;62&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/S.png?v=2&#039; class=&#039;infomax-food-icon S&#039; width=&#039;60&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>2494.0</kj>
+<kcal>596.0</kcal>
+<fett>47.1</fett>
+<gesfett>19.3</gesfett>
+<kh>24.8</kh>
+<zucker>7.6</zucker>
+<ballaststoffe>0.2</ballaststoffe>
+<eiweiss>19.5</eiweiss>
+<salz>3.5</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 2</category>
+<title>Polenta-Käse-Knusperschnitte (BIO Qualität) (Ei,Mi) mit Sour Cream-Dip (7,Mi)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>3,23</preis1>
+<preis2>4,43</preis2>
+<preis3>6,46</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/V.png?v=2&#039; class=&#039;infomax-food-icon V&#039; width=&#039;68&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>2386.0</kj>
+<kcal>570.0</kcal>
+<fett>34.6</fett>
+<gesfett>11.7</gesfett>
+<kh>47.1</kh>
+<zucker>6.7</zucker>
+<ballaststoffe>0.1</ballaststoffe>
+<eiweiss>15.6</eiweiss>
+<salz>1.9</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 9</category>
+<title>Sojagyros mit Tofu-Knoblauch Dip, buntem Krautsalat und Pitabrot (1,7,9,Wz,So,Ses,Su,Ge)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>4,22</preis1>
+<preis2>5,42</preis2>
+<preis3>8,44</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/veg.png?v=2&#039; class=&#039;infomax-food-icon veg&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/CO2.png?v=2&#039; class=&#039;infomax-food-icon CO2&#039; width=&#039;30&#039; height=&#039;64&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>4994.0</kj>
+<kcal>1193.0</kcal>
+<fett>59.0</fett>
+<gesfett>5.3</gesfett>
+<kh>120.5</kh>
+<zucker>29.5</zucker>
+<ballaststoffe>15.2</ballaststoffe>
+<eiweiss>44.5</eiweiss>
+<salz>10.2</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 9</category>
+<title>Sojagyros mit Tofu-Knoblauch Dip, buntem Krautsalat und Pitabrot (1,7,9,Wz,So,Ses,Su,Ge)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>4,22</preis1>
+<preis2>5,42</preis2>
+<preis3>8,44</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/veg.png?v=2&#039; class=&#039;infomax-food-icon veg&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/CO2.png?v=2&#039; class=&#039;infomax-food-icon CO2&#039; width=&#039;30&#039; height=&#039;64&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>4994.0</kj>
+<kcal>1193.0</kcal>
+<fett>59.0</fett>
+<gesfett>5.3</gesfett>
+<kh>120.5</kh>
+<zucker>29.5</zucker>
+<ballaststoffe>15.2</ballaststoffe>
+<eiweiss>44.5</eiweiss>
+<salz>10.2</salz>
+<foto></foto>
+</item>
+</tag>
+<tag timestamp='1792015200'>
+<item>
+<category>Essen 2</category>
+<title>Fränkischer Sauerbraten (1,7,9,Wz,Mi,Sel,Su)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>3,69</preis1>
+<preis2>4,89</preis2>
+<preis3>7,38</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/R.png?v=2&#039; class=&#039;infomax-food-icon R&#039; width=&#039;60&#039; height=&#039;62&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>901.0</kj>
+<kcal>215.0</kcal>
+<fett>9.5</fett>
+<gesfett>4.8</gesfett>
+<kh>28.0</kh>
+<zucker>16.5</zucker>
+<ballaststoffe>2.1</ballaststoffe>
+<eiweiss>3.2</eiweiss>
+<salz>4.1</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 4</category>
+<title>Süßkartoffelpfanne mit Kürbiskernen und Pesto Rosso (Gf,Man)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>3,26</preis1>
+<preis2>4,57</preis2>
+<preis3>6,52</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/Gf.png?v=2&#039; class=&#039;infomax-food-icon Gf&#039; width=&#039;30&#039; height=&#039;30&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/veg.png?v=2&#039; class=&#039;infomax-food-icon veg&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/CO2.png?v=2&#039; class=&#039;infomax-food-icon CO2&#039; width=&#039;30&#039; height=&#039;64&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>1725.0</kj>
+<kcal>412.0</kcal>
+<fett>14.7</fett>
+<gesfett>2.1</gesfett>
+<kh>54.0</kh>
+<zucker>24.1</zucker>
+<ballaststoffe>0.2</ballaststoffe>
+<eiweiss>10.1</eiweiss>
+<salz>2.1</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 4</category>
+<title>Süßkartoffelpfanne mit Kürbiskernen und Pesto Rosso (Gf,Man)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>3,26</preis1>
+<preis2>4,57</preis2>
+<preis3>6,52</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/Gf.png?v=2&#039; class=&#039;infomax-food-icon Gf&#039; width=&#039;30&#039; height=&#039;30&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/veg.png?v=2&#039; class=&#039;infomax-food-icon veg&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/CO2.png?v=2&#039; class=&#039;infomax-food-icon CO2&#039; width=&#039;30&#039; height=&#039;64&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>1725.0</kj>
+<kcal>412.0</kcal>
+<fett>14.7</fett>
+<gesfett>2.1</gesfett>
+<kh>54.0</kh>
+<zucker>24.1</zucker>
+<ballaststoffe>0.2</ballaststoffe>
+<eiweiss>10.1</eiweiss>
+<salz>2.1</salz>
+<foto></foto>
+</item>
+</tag>
+<tag timestamp='1792101600'>
+<item>
+<category>Essen 1</category>
+<title>MSC Alaska Seelachsfilet gebacken mit Zitrone (Wz,Fi) mit Remouladensoße (4,5,Wz,Ei,Mi,Sen) und Kartoffeln</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>3,78</preis1>
+<preis2>4,98</preis2>
+<preis3>7,56</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/F.png?v=2&#039; class=&#039;infomax-food-icon F&#039; width=&#039;60&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/MSC.png?v=2&#039; class=&#039;infomax-food-icon MSC&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>4033.0</kj>
+<kcal>963.0</kcal>
+<fett>69.1</fett>
+<gesfett>6.8</gesfett>
+<kh>61.0</kh>
+<zucker>6.5</zucker>
+<ballaststoffe>0.8</ballaststoffe>
+<eiweiss>25.1</eiweiss>
+<salz>4.2</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 4</category>
+<title>Pasta mit Spinat und Gorgonzolasoße (Wz,Mi)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>2,58</preis1>
+<preis2>4,57</preis2>
+<preis3>5,16</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/V.png?v=2&#039; class=&#039;infomax-food-icon V&#039; width=&#039;68&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>2740.0</kj>
+<kcal>654.0</kcal>
+<fett>26.8</fett>
+<gesfett>13.8</gesfett>
+<kh>79.4</kh>
+<zucker>7.2</zucker>
+<ballaststoffe>0.4</ballaststoffe>
+<eiweiss>21.8</eiweiss>
+<salz>3.9</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 5</category>
+<title>Bohnen Burrito (1,4,5,7,13,Wz,Sel,Sen) mit Limettendip (So,Sen)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>2,85</preis1>
+<preis2>4,57</preis2>
+<preis3>5,70</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/veg.png?v=2&#039; class=&#039;infomax-food-icon veg&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>5797.0</kj>
+<kcal>1385.0</kcal>
+<fett>110.6</fett>
+<gesfett>10.5</gesfett>
+<kh>81.2</kh>
+<zucker>21.3</zucker>
+<ballaststoffe>6.6</ballaststoffe>
+<eiweiss>14.6</eiweiss>
+<salz>8.4</salz>
+<foto></foto>
+</item>
+<item>
+<category>Essen 5</category>
+<title>Bohnen Burrito (1,4,5,7,13,Wz,Sel,Sen) mit Limettendip (So,Sen)</title>
+<description></description>
+<beilagen></beilagen>
+<preis1>2,85</preis1>
+<preis2>4,57</preis2>
+<preis3>5,70</preis3>
+<einheit></einheit>
+<piktogramme>&lt;img src=&#039;https://www.max-manager.de/daten-extern/sw-erlangen-nuernberg/icons/veg.png?v=2&#039; class=&#039;infomax-food-icon veg&#039; height=&#039;60&#039; alt=&#039;food-icon&#039;&gt;</piktogramme>
+<kj>5797.0</kj>
+<kcal>1385.0</kcal>
+<fett>110.6</fett>
+<gesfett>10.5</gesfett>
+<kh>81.2</kh>
+<zucker>21.3</zucker>
+<ballaststoffe>6.6</ballaststoffe>
+<eiweiss>14.6</eiweiss>
+<salz>8.4</salz>
+<foto></foto>
+</item>
+</tag>
+</speiseplan>
