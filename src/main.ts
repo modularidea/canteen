@@ -16,6 +16,7 @@ export default class CanteenMenuPlugin extends Plugin implements ViewHost {
 	settings!: CanteenSettings;
 	service!: MenuService;
 	private openMensa!: OpenMensaDirectory;
+	private settingTab!: CanteenSettingTab;
 
 	async onload() {
 		this.settings = normalizeSettings(await this.loadData());
@@ -51,7 +52,8 @@ export default class CanteenMenuPlugin extends Plugin implements ViewHost {
 		this.registerObsidianProtocolHandler(DEEPLINK_ACTION, (params) => {
 			void this.openFromLink(params.canteen);
 		});
-		this.addSettingTab(new CanteenSettingTab(this.app, this));
+		this.settingTab = new CanteenSettingTab(this.app, this);
+		this.addSettingTab(this.settingTab);
 	}
 
 	searchOpenMensa(query: string): Promise<CanteenRef[]> {
@@ -64,6 +66,8 @@ export default class CanteenMenuPlugin extends Plugin implements ViewHost {
 
 	async saveSettings(): Promise<void> {
 		await this.saveData(this.settings);
+		// The settings tab builds its favorites list once; rebuild it so canteens added in the sidebar show up.
+		this.settingTab.update();
 		for (const leaf of this.app.workspace.getLeavesOfType(CANTEEN_VIEW_TYPE)) {
 			if (leaf.view instanceof CanteenMenuView) leaf.view.refresh();
 		}

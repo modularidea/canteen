@@ -64,6 +64,7 @@ export class CanteenSettingTab extends PluginSettingTab {
 
 	private change(mutate: () => void): void {
 		mutate();
-		void this.host.saveSettings().then(() => this.update());
+		// saveSettings() rebuilds this tab.
+		void this.host.saveSettings();
 	}
 }
