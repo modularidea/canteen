@@ -1,8 +1,8 @@
 import { CanteenRef } from './types';
 
-export const DEEPLINK_ACTION = 'canteen-menu';
+export const DEEPLINK_ACTION = 'canteen';
 
-/** `obsidian://canteen-menu?vault=<name>[&canteen=<id or name>]`, usable as a macOS/iOS/Android shortcut. */
+/** `obsidian://canteen?vault=<name>[&canteen=<id or name>]`, usable as a macOS/iOS/Android shortcut. */
 export function buildDeeplink(vaultName: string, canteen?: string): string {
 	const query = new URLSearchParams({ vault: vaultName });
 	if (canteen) query.set('canteen', canteen);

@@ -15,11 +15,11 @@ const favorites = [canteen('seezeit:mensa_htwg', 'Mensa HTWG'), canteen('fau:men
 
 describe('buildDeeplink', () => {
 	it('encodes the vault name with %20, not "+"', () => {
-		expect(buildDeeplink('My Vault')).toBe('obsidian://canteen-menu?vault=My%20Vault');
+		expect(buildDeeplink('My Vault')).toBe('obsidian://canteen?vault=My%20Vault');
 	});
 
 	it('adds the canteen when given', () => {
-		expect(buildDeeplink('V', 'fau:mensa-sued')).toBe('obsidian://canteen-menu?vault=V&canteen=fau%3Amensa-sued');
+		expect(buildDeeplink('V', 'fau:mensa-sued')).toBe('obsidian://canteen?vault=V&canteen=fau%3Amensa-sued');
 	});
 });
 

@@ -1,9 +1,9 @@
 {
-	"id": "canteen-menu",
-	"name": "Canteen Menu",
+	"id": "canteen",
+	"name": "Canteen",
 	"version": "0.1.0",
 	"minAppVersion": "1.7.2",
-	"description": "Show the current canteen menu of your student services in the sidebar.",
+	"description": "Today's menu of your canteen or mensa in the sidebar: Seezeit, Studierendenwerk Erlangen-Nürnberg and OpenMensa.",
 	"author": "modularidea",
 	"isDesktopOnly": false
 }

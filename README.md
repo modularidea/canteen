@@ -1,6 +1,6 @@
-# Canteen Menu
+# Canteen
 
-Shows the current menu of your canteen in the Obsidian sidebar: dishes by category, the price for your price tier, vegan/vegetarian badges and allergen information. Works on desktop and mobile.
+Shows today's menu of your canteen (mensa) in the Obsidian sidebar: dishes by category, the price for your price tier, vegan/vegetarian badges and allergen information. Works on desktop and mobile.
 
 > **Unofficial.** This plugin is an independent project. It is not affiliated with, endorsed by or sponsored by any canteen operator, student services organisation or OpenMensa. See [Disclaimer](#disclaimer).
 
@@ -22,7 +22,7 @@ In the plugin settings you can choose which price is shown (**Students**, **Staf
 
 ### Shortcut link
 
-`obsidian://canteen-menu?vault=<vault name>` opens the menu; add `&canteen=<name or id>` (e.g. `&canteen=Mensa%20S%C3%BCd`) to switch to a saved canteen. Use it as a macOS/iOS/Android shortcut. The settings tab shows the link for your vault with a copy button.
+`obsidian://canteen?vault=<vault name>` opens the menu; add `&canteen=<name or id>` (e.g. `&canteen=Mensa%20S%C3%BCd`) to switch to a saved canteen. Use it as a macOS/iOS/Android shortcut. The settings tab shows the link for your vault with a copy button.
 
 ## Network use and privacy
 
@@ -57,7 +57,7 @@ npm run build   # typecheck + production bundle
 npm test        # unit tests
 ```
 
-Link the plugin folder into a test vault as `.obsidian/plugins/canteen-menu`.
+Link the plugin folder into a test vault as `.obsidian/plugins/canteen`.
 
 ## License
 

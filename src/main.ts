@@ -22,7 +22,7 @@ export default class CanteenMenuPlugin extends Plugin implements ViewHost {
 
 		// requestUrl instead of fetch: native HTTP on mobile, no CORS dependence on the operator's headers.
 		const get: HttpGet = async (url) => {
-			const res = await requestUrl({ url, throw: false, headers: { 'User-Agent': 'canteen-menu-obsidian-plugin' } });
+			const res = await requestUrl({ url, throw: false, headers: { 'User-Agent': 'canteen-plugin' } });
 			return { status: res.status, text: res.text };
 		};
 		const store: CacheStore = {
@@ -47,7 +47,7 @@ export default class CanteenMenuPlugin extends Plugin implements ViewHost {
 				void this.activateView();
 			},
 		});
-		// Deep link for shortcuts: obsidian://canteen-menu?vault=<name>[&canteen=<id or name>]
+		// Deep link for shortcuts: obsidian://canteen?vault=<name>[&canteen=<id or name>]
 		this.registerObsidianProtocolHandler(DEEPLINK_ACTION, (params) => {
 			void this.openFromLink(params.canteen);
 		});
