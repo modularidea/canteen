@@ -30,18 +30,30 @@ function dietFromNotes(notes: string[]): Diet[] {
 	return [];
 }
 
+// Some community parsers append a notice to the dish name ("Pasta⚠️Bestellzeit abgelaufen").
+const WARNING_SPLIT = /\s*\u26A0\uFE0F?\s*/;
+
+function splitWarning(raw: string): { name: string; warning?: string } {
+	const [name = '', ...rest] = raw.split(WARNING_SPLIT);
+	const warning = rest.join(' ').trim();
+	// A name that is only a warning stays as published instead of becoming empty.
+	return name.trim() && warning ? { name: name.trim(), warning } : { name: raw.trim() };
+}
+
 function parseMeal(raw: unknown): Meal | undefined {
 	if (!isDict(raw)) return undefined;
-	const name = typeof raw.name === 'string' ? raw.name.trim() : '';
-	if (!name) return undefined;
+	const rawName = typeof raw.name === 'string' ? raw.name.trim() : '';
+	if (!rawName) return undefined;
+	const { name, warning } = splitWarning(rawName);
 	const notes = Array.isArray(raw.notes) ? raw.notes.filter((n): n is string => typeof n === 'string' && n.trim() !== '') : [];
 	return {
 		category: typeof raw.category === 'string' ? raw.category.trim() : '',
 		name,
-		rawTitle: name,
+		rawTitle: rawName,
 		pricesCents: readPrices(raw.prices),
 		diet: dietFromNotes(notes),
 		notes: notes.map((n) => ({ code: n, label: n, kind: 'unknown' as const })),
+		...(warning ? { warning } : {}),
 	};
 }
 

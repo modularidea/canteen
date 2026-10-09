@@ -17,7 +17,15 @@ export function renderMealCard(parent: HTMLElement, meal: Meal, role: PriceRole)
 	const top = card.createDiv({ cls: 'canteen-meal-top' });
 	top.createDiv({ cls: 'canteen-meal-name', text: meal.name });
 	const price = meal.pricesCents[role];
-	if (price !== undefined) top.createDiv({ cls: 'canteen-meal-price', text: formatPrice(price) });
+	if (price !== undefined || meal.warning) {
+		const aside = top.createDiv({ cls: 'canteen-meal-aside' });
+		if (price !== undefined) aside.createDiv({ cls: 'canteen-meal-price', text: formatPrice(price) });
+		if (meal.warning) {
+			const warning = aside.createDiv({ cls: 'canteen-meal-warning' });
+			setIcon(warning.createSpan({ cls: 'canteen-meal-warning-icon' }), 'alert-triangle');
+			warning.createSpan({ text: meal.warning });
+		}
+	}
 
 	if (meal.diet.length > 0) {
 		const badges = card.createDiv({ cls: 'canteen-meal-badges' });

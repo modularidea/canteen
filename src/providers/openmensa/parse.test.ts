@@ -45,4 +45,23 @@ describe('parseOpenMensaMeals', () => {
 			expect(() => parseOpenMensaMeals(bad)).toThrow(ProviderError);
 		}
 	});
+
+	it('moves a warning appended to the dish name into its own field', () => {
+		const json = JSON.stringify([
+			{
+				date: '2026-10-09',
+				closed: false,
+				meals: [
+					{ name: 'Linsen mit Spätzle⚠️Bestellzeit abgelaufen', category: 'X', notes: [] },
+					{ name: 'Salat', category: 'X', notes: [] },
+					{ name: '⚠️Bestellzeit abgelaufen', category: 'X', notes: [] },
+				],
+			},
+		]);
+		const [lentils, salad, onlyWarning] = parseOpenMensaMeals(json)[0]?.meals ?? [];
+		expect(lentils).toMatchObject({ name: 'Linsen mit Spätzle', warning: 'Bestellzeit abgelaufen' });
+		expect(lentils?.rawTitle).toBe('Linsen mit Spätzle⚠️Bestellzeit abgelaufen');
+		expect(salad?.warning).toBeUndefined();
+		expect(onlyWarning?.name).toBe('⚠️Bestellzeit abgelaufen');
+	});
 });

@@ -19,6 +19,8 @@ export interface Meal {
 	pricesCents: Partial<Record<PriceRole, number>>;
 	diet: Diet[];
 	notes: MealNote[];
+	/** Notice from the source about this dish (e.g. order deadline passed), shown instead of or below the price. */
+	warning?: string;
 }
 
 export interface MenuDay {

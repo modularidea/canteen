@@ -303,3 +303,25 @@
 	font-size: var(--font-smaller, 0.9em);
 	color: var(--text-muted);
 }
+
+.canteen-meal-aside {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: var(--size-2-1, 2px);
+	max-width: 40%;
+	text-align: right;
+}
+
+.canteen-meal-warning {
+	display: flex;
+	align-items: center;
+	gap: var(--size-2-2, 4px);
+	color: var(--color-orange, var(--text-warning));
+	font-size: var(--font-smallest, 0.8em);
+}
+
+.canteen-meal-warning-icon svg {
+	width: var(--icon-xs, 14px);
+	height: var(--icon-xs, 14px);
+}
