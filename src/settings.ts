@@ -63,6 +63,15 @@ export function removeFavorite(settings: CanteenSettings, id: string): void {
 	if (settings.selectedId === id) settings.selectedId = settings.favorites[0]?.id;
 }
 
+/** Drag-and-drop reorder: moves the favorite at `from` so it ends up at index `to`. */
+export function reorderFavorite(settings: CanteenSettings, from: number, to: number): void {
+	const { favorites } = settings;
+	if (from === to || from < 0 || to < 0 || from >= favorites.length || to >= favorites.length) return;
+	const list = [...favorites];
+	list.splice(to, 0, list.splice(from, 1)[0] as CanteenRef);
+	settings.favorites = list;
+}
+
 export function moveFavorite(settings: CanteenSettings, id: string, delta: 1 | -1): void {
 	const index = settings.favorites.findIndex((f) => f.id === id);
 	const target = index + delta;

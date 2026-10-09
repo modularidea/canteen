@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { CanteenRef } from './types';
-import { DEFAULT_SETTINGS, CanteenSettings, moveFavorite, normalizeSettings, removeFavorite } from './settings';
+import { DEFAULT_SETTINGS, CanteenSettings, moveFavorite, normalizeSettings, removeFavorite, reorderFavorite } from './settings';
 
 const htwg: CanteenRef = {
 	id: 'seezeit:mensa_htwg',
@@ -102,6 +102,22 @@ describe('moveFavorite', () => {
 		moveFavorite(s, htwg.id, -1);
 		moveFavorite(s, other.id, 1);
 		moveFavorite(s, 'nope', 1);
+		expect(s).toEqual(make());
+	});
+});
+
+describe('reorderFavorite', () => {
+	it('moves a favorite to the target index', () => {
+		const s = make();
+		reorderFavorite(s, 0, 1);
+		expect(s.favorites.map((f) => f.id)).toEqual([other.id, htwg.id]);
+	});
+
+	it('ignores out-of-range or identical indices', () => {
+		const s = make();
+		reorderFavorite(s, 0, 0);
+		reorderFavorite(s, -1, 1);
+		reorderFavorite(s, 0, 5);
 		expect(s).toEqual(make());
 	});
 });
